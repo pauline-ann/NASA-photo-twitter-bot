@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/pauline-ann/NASA-photo-twitter-bot#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "image-to-base64": "^2.2.0",
+    "moment": "^2.29.1",
     "twit": "^2.2.11"
   }
 }
