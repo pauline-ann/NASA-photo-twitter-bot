@@ -1,0 +1,23 @@
+{
+  "name": "nasa-photo-twitter-bot",
+  "version": "1.0.0",
+  "description": "Twitter bot that periodically posts a random photo from the NASA API",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pauline-ann/NASA-photo-twitter-bot.git"
+  },
+  "author": "Pauline Ann Bantayan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pauline-ann/NASA-photo-twitter-bot/issues"
+  },
+  "homepage": "https://github.com/pauline-ann/NASA-photo-twitter-bot#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "twit": "^2.2.11"
+  }
+}
