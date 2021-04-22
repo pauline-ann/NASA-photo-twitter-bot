@@ -72,7 +72,7 @@ const tweet = async () => {
 
             T.post('statuses/update', {
                 media_ids: new Array(data.media_id_string),
-                status: `${title}\n${hdURL}\n#NASA #Space #Science`
+                status: `${title}\n\n${hdURL}\n#NASA #space #science #astrophotography`
             },
                 function (err, data, response) {
                     if (err) {
