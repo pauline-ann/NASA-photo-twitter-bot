@@ -87,25 +87,5 @@ const tweet = async () => {
     })
 }
 
-// Test if Heroku app working
-function test () {
-    T.post('statuses/update', {
-        status: 'test'
-    },
-        function (err, data, response) {
-            if (err) {
-                console.log('error:', err);
-            }
-            else {
-                console.log('Tweeted an image!');
-            }
-        }
-    );
-}
-
-setInterval(function () { test(); }, 6000)
-
-
-
 // Run every 24 hours
-// setInterval(function () { tweet(); }, 216000000)
+setInterval(function () { tweet(); }, 216000000)
