@@ -57,6 +57,7 @@ const tweet = async () => {
   if (mediaType === "video") {
     let videoURL = res.data.url;
 
+    // Adjust YouTube URL so that the preview displays on Twitter
     // Replace part of the URL
     videoURL = videoURL.replace('embed/', 'watch?v=')
     // Take out last 6 characters of API url: '?rel=0'
@@ -118,4 +119,4 @@ const tweet = async () => {
 };
 
 // Run every 24 hours
-setInterval(function () { tweet(); }, 86400000)
+setInterval(function () { tweet(); }, 86400000);
