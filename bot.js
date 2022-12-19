@@ -50,6 +50,15 @@ const getData = () => {
 const tweet = async () => {
   const res = await getData()
   const title = res.data.title
+
+  let postDescription = false
+  const description = res.data.explanation
+  const totalLength = title.length + description.length
+
+  if (totalLength < 190) {
+    postDescription = true
+  }
+
   const mediaType = res.data.media_type
   console.log(mediaType)
 
@@ -68,7 +77,7 @@ const tweet = async () => {
     T.post(
       "statuses/update",
       {
-        status: `${title}\n\n${videoURL}\n#NASA #space #science #astrovideography`,
+        status: `${title}\n\n${postDescription && `${description}\n\n`}Source: ${videoURL}`,
       },
       function (err, data, response) {
         if (err) {
@@ -102,7 +111,7 @@ const tweet = async () => {
             "statuses/update",
             {
               media_ids: new Array(data.media_id_string),
-              status: `${title}\n\n${hdURL}\n#NASA #space #science #astrophotography`,
+              status: `${title}\n\n${postDescription ? description : ''}\n\nSource: ${hdURL}`,
             },
             function (err, data, response) {
               if (err) {
